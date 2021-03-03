@@ -24,6 +24,7 @@
                         <p sec:authorize="isAuthenticated()">First Name: <span sec:authorize="isAuthenticated()" th:text="${members.firstName}"></span></p>
                         <p sec:authorize="isAuthenticated()">Last Name: <span sec:authorize="isAuthenticated()" th:text="${members.lastName}"></span></p>
                         <p sec:authorize="isAuthenticated()">e-mail: <span sec:authorize="isAuthenticated()" th:text="${members.email}"></span></p>
+                        <p sec:authorize="isAuthenticated()">role: <span sec:authorize="isAuthenticated()" th:text="${members.role[0].name}"></span></p>
                     </div>
                     <p class="lead">
                         <a sec:authorize="!isAuthenticated()" class="btn btn-primary btn-lg" href="/login" role="button">Login &raquo;</a>

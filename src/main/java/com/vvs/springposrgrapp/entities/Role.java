@@ -6,6 +6,13 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Role {
     
@@ -14,27 +21,4 @@ public class Role {
 
     @ManyToMany(mappedBy = "role")
     private List<Member> members;
-
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public List<Member> getMembers() {
-        return this.members;
-    }
-
-    public void setMembers(List<Member> members) {
-        this.members = members;
-    }
-    
-    public Role(String name) {
-        this.name = name;
-    }
-
-    public Role() {
-    }
 }
