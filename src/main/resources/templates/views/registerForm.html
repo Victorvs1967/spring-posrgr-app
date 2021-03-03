@@ -1,43 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.springframework.org/schema/data/jaxb" layout:decorate="~{fragments/main_layout}">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Form</title>
-</head>
-<body>
-    <div layout:fragment="content" class="container">
-        <div class="simple-login-container col-md-6 offset-md-3">
-            <h2>Register Form</h2>
-            <form th:action="@{/register}" th:object="${member}" method="post">
-                <div class="row">
-                    <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" placeholder="First name" id="firstName" th:field="*{firstName}" />
-                    </div>
+<div layout:fragment="content" class="container">
+    <div class="simple-login-container col-md-6 offset-md-3">
+        <h2>Register Form</h2>
+        <form th:action="@{/register}" th:object="${member}" method="post">
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <input type="text" class="form-control" placeholder="First name" id="firstName" th:field="*{firstName}" />
                 </div>
-                <div class="row">
-                    <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" placeholder="Last name" id="lastName" th:field="*{lastName}" />
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <input type="text" class="form-control" placeholder="Last name" id="lastName" th:field="*{lastName}" />
                 </div>
-                <div class="row">
-                    <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" placeholder="email" id="email" th:field="*{email}" /> 
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <input type="text" class="form-control" placeholder="email" id="email" th:field="*{email}" /> 
                 </div>
-                <div class="row">
-                    <div class="col-md-12 form-group">
-                        <input type="password" class="form-control" placeholder="Enter your password" id="password" th:field="*{password}" />
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <input type="password" class="form-control" placeholder="Enter your password" id="password" th:field="*{password}" />
                 </div>
-                <div class="row">
-                    <div class="col-md-12 form-group">
-                        <input type="submit" class="btn btn-lg btn-primary btn-block">
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <input type="submit" class="btn btn-lg btn-primary btn-block">
                 </div>
-            </form>
-        </div>    
-    </div>
-</body>
+            </div>
+        </form>
+    </div>    
+</div>
 </html>
